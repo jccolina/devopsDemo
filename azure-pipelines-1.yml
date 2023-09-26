@@ -27,6 +27,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Dockerhub joseccb'
-    repository: 'joseccb / trainingazure'
+    repository: $(docker-repository)
     command: 'buildAndPush'
     Dockerfile: '**/AzureDockerfile'
